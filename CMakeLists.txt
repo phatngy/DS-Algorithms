@@ -13,6 +13,9 @@ find_package(Threads REQUIRED)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(glog REQUIRED libglog)
 
+link_libraries(${glog_LIBRARIES})
+
+
 add_subdirectory(src/backtracking)
 # add_subdirectory(dynamic-programming)
 # add_subdirectory(graph)
